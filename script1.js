@@ -11,7 +11,7 @@ $(document).ready(function () {
 
         var tableAdd = xisob.map((item, i) => `
         <tr>
-                        <th scope="row">${i+1}</th>
+                        <th scope="row">${i + 1}</th>
                         <td>${item.izoh}</td>
                         <td>${item.summa}</td>
                         <td>${item.sana}  ${item.hour}</td>
@@ -19,12 +19,13 @@ $(document).ready(function () {
         `).join('')
         $('#text').html(tableAdd)
     }
+    var summa = $('#summa').val();
     $('#btn').click(() => {
         var sana = new Date();
         var yil = sana.toLocaleDateString();
         var hour = sana.toLocaleTimeString();
         var izoh = $('#izoh').val();
-        var summa = $('#summa').val();
+
         var variant = $('#inputGroupSelect04').val();
         var qiymat = summa * variant;
         if (izoh == "" || summa == "") {
@@ -53,7 +54,7 @@ $(document).ready(function () {
 
         var tableAddKirim = kirim.map((item, i) => `
         <tr>
-                        <th scope="row">${i+1}</th>
+                        <th scope="row">${i + 1}</th>
                         <td>${item.izoh}</td>
                         <td>${item.summa}</td>
                         <td>${item.sana} ${item.hour}</td>
@@ -72,7 +73,7 @@ $(document).ready(function () {
         });
         var tableAddKirim = chiqim.map((item, i) => `
         <tr>
-                        <th scope="row">${i+1}</th>
+                        <th scope="row">${i + 1}</th>
                         <td>${item.izoh}</td>
                         <td>${item.summa}</td>
                         <td>${item.sana} ${item.hour}</td>
@@ -91,7 +92,7 @@ $(document).ready(function () {
         })
         var tableAddKirim = searchNote.map((item, i) => `
         <tr>
-                        <th scope="row">${i+1}</th>
+                        <th scope="row">${i + 1}</th>
                         <td>${item.izoh}</td>
                         <td>${item.summa}</td>
                         <td>${item.sana} ${item.hour}</td>
